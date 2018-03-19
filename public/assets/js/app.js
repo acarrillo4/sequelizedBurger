@@ -24,13 +24,11 @@ $(function() {
         burger_name: newBurgerValue,
         devoured: false
       }
-      console.log(newBurger);
       // Send the POST request.
       $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
       }).then(function(data) {
-          console.log("created new burger");
           // Reload the page to get the updated list
           location.reload();
         });

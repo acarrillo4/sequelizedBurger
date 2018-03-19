@@ -29,7 +29,7 @@ router.put("/api/burgers/:id", function(req, res) {
         devoured: req.body.devoured
     }, {
         where: {
-            id: req.body.id
+            id: req.params.id
         }
     }).then(function(result) {
         if (result.changedRows == 0) {
