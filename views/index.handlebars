@@ -16,8 +16,9 @@
 
         <!-- Burgers List -->
       <ul>
-        {{#each burgers}}
-          {{#unless devoured}}
+        {{#each burger}}
+          {{#unless this.devoured}}
+          <p>{{this.burger_name}}</p>
           {{> burgers/burger-block devoured=true}}
           {{/unless}}
         {{/each}}
@@ -31,8 +32,8 @@
       <div id="devouredList">
       <!-- Devoured List -->
         <ul>
-        {{#each burgers}}
-          {{#if devoured}}
+        {{#each burger}}
+          {{#if this.devoured}}
             {{> burgers/burger-block devoured=false}}
           {{/if}}
         {{/each}}

@@ -1,10 +1,10 @@
 <li id="listItem">
-	{{#if devoured}}
-	<h3>{{id}}: {{burger_name}}</h3>
-	<button class="devour-button btn btn-primary" data-id="{{id}}" data-devour="{{devoured}}">
+	{{#if this.devoured}}
+	<h3>{{this.id}}: {{this.burger_name}}</h3>
+	<button class="devour-button btn btn-primary" data-id="{{this.id}}" data-devour="{{this.devoured}}">
 	DEVOUR
 	{{else}}
-	<h3 id="itemsDevoured">{{id}}: {{burger_name}}</h3>
+	<h3 id="itemsDevoured">{{this.id}}: {{this.burger_name}}</h3>
 	{{/if}}
 	</button>
 </li>
